@@ -12,7 +12,7 @@ FROM base AS builder
 WORKDIR /app
 COPY . .
 COPY package.json yarn.lock .yarnrc.yml ./
-COPY .yarn ./.yarn
+#COPY .yarn ./.yarn
 RUN yarn install --immutable
 
 # Build the app (in standalone mode based on next.config.js)
